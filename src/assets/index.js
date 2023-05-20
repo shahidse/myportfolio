@@ -3,8 +3,8 @@ import nairobi from './backgrounds/nairobi.png';
 import whiteabstract from './backgrounds/white-abstract.png';
 import worldmap from './backgrounds/world-map.png';
 
-import logo from './logo/logo-black.png';
-import logotext from './logo/logo-text-black.png';
+import logo from './logo/Free_Sample_By_Wix.jpg';
+// import logotext from './logo/logo-text-black.png';
 
 import shaq from './personal/shaq.png';
 
@@ -49,6 +49,20 @@ import math from './projects/math-magicians.png';
 import movie from './projects/movie-metro.png';
 import nyeusi from './projects/nyeusi.png';
 import space from './projects/space-hub.png';
+import shahid from './personal/A-60489-removebg-preview.png'
+import reactNative from './icons/react_native.png'
+import fullStack from './icons/fullStack.webp'
+import zigron from './icons/zigron.png'
+import codersGlobe from './icons/codersGlobe.jpeg'
+import unitedSol from './icons/unitedsol.jpeg'
+import magento from './icons/magento.png'
+import express from './icons/expressJs.png'
+import coderIgniter from './icons/codeIgniter.png'
+import symfony from './icons/symfony.png'
+import mysql  from './icons/mySql.png'
+import nestjs from './icons/nestJs.png'
+import nextJs from './icons/nextJs.png'
+import mongoDB from './icons/mongoDB.jpeg'
 
 export {
   bwmap,
@@ -56,7 +70,7 @@ export {
   whiteabstract,
   worldmap,
   logo,
-  logotext,
+  // logotext,
   shaq,
   backend,
   ux,
@@ -96,4 +110,18 @@ export {
   dcc,
   kelhel,
   microverse,
+  shahid,
+  reactNative,
+  fullStack,
+  zigron,
+  codersGlobe,
+  unitedSol,
+  magento,
+  nextJs,
+  nestjs,
+  express,
+  mysql,
+  symfony,
+  coderIgniter,
+  mongoDB
 };

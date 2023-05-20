@@ -37,12 +37,7 @@ const About = () => {
       <motion.p
         variants={fadeIn('', '', 0.1, 1)}
         className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis
-        sapiente ipsum dolorum dicta eaque cumque inventore molestias, beatae ea
-        quaerat alias accusamus voluptas autem! Alias odit voluptates in totam
-        vitae dignissimos minus eaque culpa unde tempore dolore aperiam
-        obcaecati voluptatum aliquam corrupti, suscipit accusamus! Odit unde
-        veniam dolorum ipsum doloribus.
+        As a software developer with expertise in the JavaScript stack and PHP, my portfolio showcases my skills in web and mobile development. With a strong command over JavaScript, including popular frameworks like React,NextJs, Angular, and Vue.js, I have created interactive and responsive web applications. Additionally, my proficiency in server-side JavaScript using Node.js and Express.js and NestJs has allowed me to build scalable back-end systems and RESTful APIs. In PHP, I have developed server-side applications and dynamic web pages using frameworks like CodeIgniter and Symfony. Moreover, I have extended my skills to mobile development using React Native, building cross-platform mobile applications for iOS and Android. With a comprehensive understanding of the full development life cycle, my portfolio highlights my ability to deliver robust and performant solutions for diverse projects in web and mobile development.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
