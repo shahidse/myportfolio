@@ -39,7 +39,8 @@ import {
   nestjs,
   nextJs,
   mysql,
-  mongoDB
+  mongoDB,
+  microagility
 } from "../assets";
 
 export const navLinks = [
@@ -138,38 +139,37 @@ const technologies = [
     icon: docker,
   },
   {
-    name:"MySql",
-    icon:mysql
+    name: "MySql",
+    icon: mysql,
   },
   {
-    name:"NestJs",
-    icon:nestjs
+    name: "NestJs",
+    icon: nestjs,
   },
   {
-    name:"NextJs",
-    icon:nextJs
+    name: "NextJs",
+    icon: nextJs,
   },
   {
-    name:"ExpressJs",
-    icon:express
+    name: "ExpressJs",
+    icon: express,
   },
   {
-    name:"codeIgniter",
-    icon:coderIgniter
+    name: "codeIgniter",
+    icon: coderIgniter,
   },
   {
-    name:"symfony",
-    icon:symfony
-
+    name: "symfony",
+    icon: symfony,
   },
   {
-    name:"MongoDB",
-    icon:mongoDB
+    name: "MongoDB",
+    icon: mongoDB,
   },
   {
-    name:"React Native",
-    icon:reactNative
-  }
+    name: "React Native",
+    icon: reactNative,
+  },
 ];
 
 const experiences = [
@@ -199,7 +199,14 @@ const experiences = [
     company_name: "Zigron Inc",
     icon: zigron,
     iconBg: "#333333",
-    date: "April 2023 - Present",
+    date: "April 2023 - July 2024",
+  },
+  {
+    title: "Full Stack Developer",
+    company_name: "MicroAgility Service pvt ltd",
+    icon: microagility,
+    iconBg: "#333333",
+    date: "August 2024 - Feb 2025",
   },
 ];
 

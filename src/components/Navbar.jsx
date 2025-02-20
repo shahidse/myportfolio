@@ -1,97 +1,98 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { styles } from '../styles';
-import { navLinks } from '../constants';
-import { close, menu, logo } from '../assets';
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { styles } from "../styles";
+import { navLinks } from "../constants";
+import { close, menu, logo } from "../assets";
 
 const Navbar = () => {
-  const [active, setActive] = useState('');
+  const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
 
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-2 fixed 
-      top-0 z-20 bg-flashWhite sm:opacity-[0.97] xxs:h-[12vh]`}>
+      className={`${styles.paddingX} w-full flex items-center py-3 fixed 
+      top-0 z-50 bg-flashWhite sm:opacity-[0.97] xxs:h-[12vh] transition-all`}
+    >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
+        {/* Logo */}
         <Link
           to="/"
           className="flex items-center gap-2"
           onClick={() => {
-            setActive('');
+            setActive("");
             window.scrollTo(0, 0);
-          }}>
+          }}
+        >
           <img
-            src={logo} // your logo comes here
+            src={logo}
             alt="logo"
-            className="sm:w-[130px] sm:h-[80px] w-[130px] h-[80px] object-contain"
+            className="sm:w-[130px] sm:h-[80px] w-[130px] h-[80px] object-cover"
           />
-
-          {/* if you have text you want besides your logo it comes here.
-          Otherwise delete this if you don't need it. */}
-          {/* <img
-            src={logotext}
-            alt="logo"
-            className="sm:w-[90px] sm:h-[90px] w-[85px] h-[85px] -ml-[0.6rem] object-contain"
-          /> */}
         </Link>
-        <ul className="list-none hidden sm:flex flex-row gap-14 mt-2">
+
+        {/* Desktop Navigation */}
+        <ul className="hidden sm:flex flex-row gap-10 mt-2">
           {navLinks.map((nav) => (
             <li
               key={nav.id}
               className={`${
-                active === nav.title ? 'text-french' : 'text-eerieBlack'
-              } hover:text-taupe text-[21px] font-medium font-mova 
-                uppercase tracking-[3px] cursor-pointer nav-links`}
-              onClick={() => setActive(nav.title)}>
+                active === nav.title ? "text-french" : "text-eerieBlack"
+              } hover:text-taupe text-[18px] font-medium uppercase tracking-widest cursor-pointer`}
+              onClick={() => setActive(nav.title)}
+            >
               <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
         </ul>
 
-        {/* mobile */}
-        <div className="sm:hidden flex flex-1 w-screen justify-end items-center">
-          {toggle ? (
-            <div
-              className={`p-6 bg-flashWhite opacity-[0.98] absolute 
-                top-0 left-0 w-screen h-[100vh] z-10 menu ${
-                  toggle ? 'menu-open' : 'menu-close'
-                }`}>
-              <div className="flex justify-end">
-                <img
-                  src={close}
-                  alt="close"
-                  className="w-[22px] h-[22px] object-contain cursor-pointer"
-                  onClick={() => setToggle(!toggle)}
-                />
-              </div>
-              <ul
-                className="list-none flex flex-col -gap-[1rem] 
-                items-start justify-end mt-[10rem] -ml-[35px]">
-                {navLinks.map((nav) => (
-                  <li
-                    id={nav.id}
-                    key={nav.id}
-                    className={`${
-                      active === nav.title ? 'text-french' : 'text-eerieBlack'
-                    } text-[88px] font-bold font-arenq 
-                      uppercase tracking-[1px] cursor-pointer`}
-                    onClick={() => {
-                      setToggle(!toggle);
-                      setActive(nav.title);
-                    }}>
-                    <a href={`#${nav.id}`}>{nav.title}</a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ) : (
+        {/* Mobile Menu Button */}
+        <button
+          aria-label="Toggle mobile menu"
+          aria-expanded={toggle}
+          className="sm:hidden flex justify-end items-center"
+          onClick={() => setToggle(!toggle)}
+        >
+          <img
+            src={toggle ? close : menu}
+            alt="menu icon"
+            className="w-9 h-9 object-contain cursor-pointer transition-transform duration-300"
+          />
+        </button>
+
+        {/* Mobile Menu */}
+        <div
+          className={`fixed inset-0 bg-flashWhite opacity-[0.98] z-40 transition-transform duration-500 ${
+            toggle ? "translate-x-0" : "translate-x-full"
+          } sm:hidden flex flex-col items-center justify-center`}
+        >
+          <button
+            aria-label="Close menu"
+            className="absolute top-5 right-5"
+            onClick={() => setToggle(false)}
+          >
             <img
-              src={menu}
-              alt="menu"
-              className="w-[34px] h-[34px] object-contain cursor-pointer"
-              onClick={() => setToggle(!toggle)}
+              src={close}
+              alt="close"
+              className="w-7 h-7 object-contain cursor-pointer"
             />
-          )}
+          </button>
+
+          <ul className="flex flex-col items-center space-y-10 mt-10">
+            {navLinks.map((nav) => (
+              <li
+                key={nav.id}
+                className={`${
+                  active === nav.title ? "text-french" : "text-eerieBlack"
+                } text-[28px] font-bold uppercase tracking-widest cursor-pointer`}
+                onClick={() => {
+                  setToggle(false);
+                  setActive(nav.title);
+                }}
+              >
+                <a href={`#${nav.id}`}>{nav.title}</a>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </nav>

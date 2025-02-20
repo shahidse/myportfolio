@@ -50,6 +50,7 @@ import shahid from './personal/A-60489-removebg-preview.png'
 import reactNative from './icons/react_native.png'
 import fullStack from './icons/fullStack.webp'
 import zigron from './icons/zigron.png'
+import microagility from './icons/apac_microagility_logo.jpeg'
 import codersGlobe from './icons/codersGlobe.jpeg'
 import unitedSol from './icons/unitedsol.jpeg'
 import magento from './icons/magento.png'
@@ -119,5 +120,6 @@ export {
   mysql,
   symfony,
   coderIgniter,
-  mongoDB
+  mongoDB,
+  microagility
 };
